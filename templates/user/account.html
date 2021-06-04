@@ -1,0 +1,51 @@
+{% load static %}
+{% include "main/includes/head.html" %}
+{% include "main/includes/navbar.html" %}
+
+
+<br>
+<br>
+<div class="container">
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <div class="row valign-wrapper">
+          <div class="col s2">
+            <img src="{{ student.imageURL }}" alt="" class="circle responsive-img">
+            <!-- notice the "circle" class -->
+          </div>
+          <div class="col s10">
+            <span class="black-text">
+                <h2>{{student.user.first_name}}</h2>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+</div>
+<br>
+<br>
+<div class="container">
+    <br>
+    <div class="container">
+    <h3><a class="btn-floating btn-large waves-effect waves-light red" href="{% url 'add_project' student.user.username %}"><i class="material-icons">add</i></a>
+      New Project</h3>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+</div>
+
+
+ 
+
+
+
+{% include "main/includes/footer.html" %}

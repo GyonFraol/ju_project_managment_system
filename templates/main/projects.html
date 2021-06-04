@@ -1,0 +1,44 @@
+{% load static %}
+{% include "main/includes/head.html" %}
+{% include "main/includes/navbar.html" %}
+
+
+<br>
+<br>
+
+
+<br>
+<br>
+
+<div class="col">
+  {% for project in projects %}
+    <section class="container section" id ="photos">
+      <div class="row">
+        <div class="col s12 l6">
+          <img src="{{project.imageURL}}" alt="" class="responsive-img">
+        </div>
+        <div class="col s12 l6" style="margin-top:10;"> 
+          <h2 class="indigo-text text-darken-4"style = "font-size:30px; margin-top:-8px;">{{project.project_title}}</h2>
+        </div>
+        <br>
+        <br>
+        <div class="col s12 l6" style="margin-top:20;">
+          <p class = "flow-text " style="font-size:20px">{{project.abstract}}</p>
+          <a href="{% url 'render_pdf' project.project_title %}" aria-label="Office of Research &amp; Innovation Learn more" target="" class="cta green external" data-module="cta" aria-describedby="id38cf4867-5b96-4c87-9f19-08596d3d82aa">Learn more</a>
+        </div>
+      </div>
+      <br>
+      <hr style="height:10px;">
+      <br>
+      <br>
+      
+    </section>
+  {% endfor %}
+</div>
+<br>
+<br>
+
+  
+
+
+{% include "main/includes/footer.html" %}

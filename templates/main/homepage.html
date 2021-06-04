@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  {% include "main/includes/head.html" %}
+  <title>Header</title>
+<body>
+    
+  {% include "main/includes/navbar.html" %}
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center   black-text  "><strong>JU Project Management system</strong></h1>
+        <div class="row center">
+          <h5 class="header black-text ">A place where you can find projecets with their specifications!</h5>
+        </div>
+       
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'images/jit.jpg' %}" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Speeds up project searching</h5>
+
+            <p class="light">students or researches can find previously done projects in the campus.searching for projects in hardcopy format takes a lot of time.but browsing these projects in these web app takes a very little time. </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Friendly</h5>
+
+            <p class="light">users can search for a specific project based on its title,the year it was done and by which department it was done.easy sign up and login are also available.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to use</h5>
+
+            <p class="light"> no complex system in this web app. easily check if the title you want to do projects with is already done or not. 
+              easily sign up, and get access to plenty of projects.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+<div class="parallax-container valign-wrapper">
+<div class="section no-pad-bot">
+    
+</div>
+<div class="parallax"><img src=" {% static 'images/ju.jpg' %} " alt="Unsplashed background img 2"></div>
+</div>
+
+<div class="container">
+  <div class="section">
+
+    <div class="row">
+      <div class="col s12 center">
+        <h3><i class="mdi-content-send brown-text"></i></h3>
+        <p class="light flow-text"><strong>Jimma University</strong></p>
+       
+        <div class="content">
+          <div class="place">
+            <span class="fas fa-map-marker-alt" style="font-size: 30px;"  class="text"><h5>Jimma,Ethiopia</h5></span>
+          </div>
+        <div class="email">
+          <span class="fas fa-envelope"  style="font-size: 30px;"></span>
+          <span class="text"><h5>https://www.ero@ju.edu.et</h5></span>
+        </div>
+
+          <div class="phone">
+            <span class="fas fa-phone-alt"  style="font-size: 30px;"></span>
+            <span class="text"><h5>+251-(0)47-111-2202</h5></span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+    <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+        
+    </div>
+    <div class="parallax"><img src="{% static 'images/varnero.jpg' %}" alt="Unsplashed background img 3"></div>
+    </div>  
+{% include "main/includes/footer.html" %}
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  {% include "main/includes/head.html" %}
+  <title>Header</title>
+<body>
+    
+  {% include "main/includes/navbar.html" %}
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center   black-text  "><strong>JU Project Management system</strong></h1>
+        <div class="row center">
+          <h5 class="header black-text ">A place where you can find projecets with their specifications!</h5>
+        </div>
+       
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="{% static 'images/jit.jpg' %}" alt="Unsplashed background img 1"></div>
+  </div>
+  
+    {% block content %}
+
+    {% endblock %}
+  
+{% include "main/includes/footer.html" %}
+
+</body>
+</html>
+

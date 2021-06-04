@@ -1,0 +1,42 @@
+{% load static %}
+
+  <nav class="white" role="navigation" style="height:80px;">
+  <a href="{% url 'homepage' %}" class="brand-logo"><img class="img-responsive" style="margin-left: 25px; width:70px; height:70px; margin-top:5px" src="{% static 'images/logo.png' %}"></a>
+    
+  <div class="nav-wrapper container">
+    
+      <ul class="right hide-on-med-and-down"> 
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'account' user.username %}"><b>{{user.username}}</b></a></li>
+          <li><a href="{% url 'logout' %}"><b>Logout</b></a></li>
+          <li><a href="{% url 'department' %}"><b>Department</b></a></li>
+        {% else %}
+        {% if title != 'department' %}
+            <li><a href="{% url 'department' %}"><b>Department</b></a></li>
+          {% endif %}
+          <li><a href="{% url name.1.1 %}"><b>{{name.1.0}}</b></a></li>
+          <li><a href="{% url name.2.1 %}"><b>{{name.2.0}}</b></a></li>
+        {% endif %}
+        
+      </ul>
+      
+
+      <ul id="nav-mobile" class="sidenav">
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'account' user.username %}"><b>{{user.username}}</b></a></li>
+          <li><a href="{% url 'logout' %}"><b>Logout</b></a></li>
+          <li><a href="{% url 'department' %}"><b>Department</b></a></li>
+          
+        {% else %}
+        {% if title != 'department' %}
+          <li><a href="{% url 'department' %}"><b>Department</b></a></li>
+        {% endif %}
+          <li><a href="{% url name.1.1 %}"><b>{{name.1.0}}</b></a></li>
+          <li><a href="{% url name.2.1 %}"><b>{{name.2.0}}</b></a></li>
+        {% endif %}
+        
+      </ul>
+
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
